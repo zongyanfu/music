@@ -14,4 +14,13 @@ class Profile {
     token = json['token'];
     setting = Setting.fromJson(json['setting']);
   }
+
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'userId': userId,
+      'username': username,
+      'token': token,
+      'setting': setting.toJson()
+    };
+  }
 }

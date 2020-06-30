@@ -20,4 +20,9 @@ class Global {
       }
     }
   }
+
+  static saveProfile() {
+    var json = profile.toJson();
+    _prefs.setString('profile', jsonEncode(json));
+  }
 }

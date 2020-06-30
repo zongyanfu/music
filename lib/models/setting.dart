@@ -19,4 +19,11 @@ class Setting {
         theme = ThemeMode.system;
     }
   }
+
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'locale': locale?.languageCode,
+      'theme': theme?.toString()?.substring(10)
+    };
+  }
 }
